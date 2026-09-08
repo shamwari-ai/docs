@@ -6,24 +6,35 @@
  * needed. See https://www.mintlify.com/docs/customize/custom-scripts.
  *
  * What's native to docs.json already (not duplicated here): theme, the
- * primary/light/dark brand colors, the page background colors and
- * decoration, and the heading/body font pair. This file exists for the one
- * thing docs.json has no field for: the full neutral (gray) ramp Mintlify
- * uses across borders, muted text, and code block chrome. Left alone it's
- * a generic gray scale that doesn't relate to the sodalite blue / warm
- * cream pairing in docs.json — this ties it to the same palette.
+ * primary/light/dark brand color (sodalite, per Mzizi's mineral tokens —
+ * `--color-sodalite` is #283593 / #3D5AFE, exactly what's already set),
+ * the page background colors and decoration, and the heading/body font
+ * pair (Noto Serif / Noto Sans, per Mzizi's typography tokens — chosen
+ * ecosystem-wide for broad African-language and diacritic support, not
+ * a docs-specific pick). This file exists for the one thing docs.json has
+ * no field for: the full neutral (gray) ramp Mintlify uses across borders,
+ * muted text, and code block chrome.
+ *
+ * The ramp below is not invented — it's linearly interpolated (with an
+ * ease-in-out curve for perceptual spacing) between Mzizi's own canonical
+ * "base" background tokens: #F3F3F1 (light) and #0E0D0C (dark). That's
+ * the same neutral the wider Bundu ecosystem uses for page backgrounds
+ * (openntl.org's own background colors, #F3F2EE/#1B1A17, land almost
+ * exactly on this neutral independently), so borders and muted text here
+ * read as part of the same family rather than Mintlify's unrelated
+ * default gray.
  */
 
 :root {
-  --gray-50: 250 249 246;
-  --gray-100: 243 242 238;
-  --gray-200: 230 229 224;
-  --gray-300: 208 207 202;
-  --gray-400: 168 167 163;
-  --gray-500: 128 127 124;
-  --gray-600: 92 91 90;
-  --gray-700: 64 63 64;
-  --gray-800: 40 39 42;
-  --gray-900: 22 21 26;
-  --gray-950: 12 11 16;
+  --gray-50: 243 243 241;
+  --gray-100: 237 237 235;
+  --gray-200: 219 219 217;
+  --gray-300: 194 193 192;
+  --gray-400: 162 162 160;
+  --gray-500: 128 128 126;
+  --gray-600: 95 94 93;
+  --gray-700: 63 63 61;
+  --gray-800: 38 37 36;
+  --gray-900: 20 19 18;
+  --gray-950: 14 13 12;
 }

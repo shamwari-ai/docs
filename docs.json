@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "aspen",
+  "theme": "sequoia",
   "name": "Shamwari",
   "colors": {
     "primary": "#283593",
@@ -9,20 +9,23 @@
   },
   "background": {
     "color": {
-      "light": "#faf9f5",
-      "dark": "#0e1128"
+      "light": "#f3f3f1",
+      "dark": "#0e0d0c"
     },
-    "decoration": "gradient"
+    "decoration": "grid"
   },
   "fonts": {
     "heading": {
-      "family": "Source Sans Pro",
-      "weight": 500
+      "family": "Noto Serif",
+      "weight": 600
     },
     "body": {
-      "family": "Plus Jakarta Sans",
-      "weight": 500
+      "family": "Noto Sans",
+      "weight": 400
     }
+  },
+  "icons": {
+    "library": "lucide"
   },
   "favicon": "https://shamwari.ai/favicon.png",
   "navigation": {
