@@ -6,20 +6,34 @@
  * needed. See https://www.mintlify.com/docs/customize/custom-scripts.
  *
  * What's native to docs.json already (not duplicated here): theme, the
- * primary/light/dark brand color (Mzizi's malachite mineral token —
- * `--color-malachite`, lightHex #004D40 / darkHex #64FFDA — swapped in for
- * sodalite/cobalt because it's the only mineral in the palette that clears
- * WCAG AA in both directions against the site's own background: 8.85:1 for
- * the light-mode green-on-cream pairing, 15.59:1 for the dark-mode
- * mint-on-near-black pairing, both AAA. Sodalite's dark variant measured
- * 3.78:1 against this same background — a real failure, not a nitpick),
- * the page background colors and decoration, and the heading/body font
+ * primary/light/dark brand color (Mzizi's sodalite mineral token —
+ * `--color-sodalite`, lightHex #283593 / darkHex #3D5AFE), the page
+ * background colors and decoration, and the heading/body font
  * pair (Noto Serif / Noto Sans, per Mzizi's typography tokens — chosen
  * ecosystem-wide for broad African-language and diacritic support, not
  * a docs-specific pick). This file exists for two things docs.json has no
  * field for: the full neutral (gray) ramp Mintlify uses across borders,
  * muted text, and code block chrome; and base font sizing (docs.json's
  * `fonts` field controls family/weight only, not size).
+ *
+ * On the mineral: sodalite is shamwari's assigned mineral in Mzizi's
+ * ecosystem tokens ("Intelligence, depth, reasoning"; usage: "AI/Shamwari
+ * surfaces, deep-reasoning states"). Malachite is assigned to nhimbe,
+ * campfire, novels and health, and its documented usage is "Success
+ * states, positive actions" — not a brand primary.
+ *
+ * An earlier revision of this file swapped sodalite out for malachite on
+ * the grounds that sodalite's dark variant "measured 3.78:1 against this
+ * same background — a real failure". That reasoning does not hold. The
+ * gate is 3:1, which 3.78:1 clears; and the swap did not achieve what it
+ * claimed, because malachite's own darkHex (#64FFDA) measures 1.12:1
+ * against the light background and fails outright. Measured per variant
+ * against the background each one actually renders on, sodalite is fine:
+ * #283593 gives 9.35:1 on #F3F3F1, #3D5AFE gives 3.78:1 on #0E0D0C.
+ *
+ * Note also that Mzizi's stated contrast standard is APCA 3.0 AAA, not
+ * WCAG — a different algorithm, so WCAG ratios are a floor here, not the
+ * system's own bar.
  *
  * The ramp below is not invented — it's linearly interpolated (with an
  * ease-in-out curve for perceptual spacing) between Mzizi's own canonical
