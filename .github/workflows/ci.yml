@@ -19,7 +19,7 @@ jobs:
     name: Build validation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v6
         with:
@@ -34,7 +34,7 @@ jobs:
     name: Broken links
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v6
         with:
@@ -52,7 +52,7 @@ jobs:
     name: Accessibility
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v6
         with:
@@ -95,7 +95,7 @@ jobs:
     name: Language discipline
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       # Same rule shamwari-ai/shamwari's docs-site/site enforce via
       # check.mjs (see that repo's CLAUDE.md, "Language discipline" table):
