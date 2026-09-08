@@ -7,7 +7,7 @@
  *
  * What's native to docs.json already (not duplicated here): theme, the
  * primary/light/dark brand color (Mzizi's sodalite mineral token —
- * `--color-sodalite`, lightHex #283593 / darkHex #3D5AFE), the page
+ * `--color-sodalite`, lightHex #283593), the page
  * background colors and decoration, and the heading/body font
  * pair (Noto Serif / Noto Sans, per Mzizi's typography tokens — chosen
  * ecosystem-wide for broad African-language and diacritic support, not
@@ -20,20 +20,29 @@
  * ecosystem tokens ("Intelligence, depth, reasoning"; usage: "AI/Shamwari
  * surfaces, deep-reasoning states"). Malachite is assigned to nhimbe,
  * campfire, novels and health, and its documented usage is "Success
- * states, positive actions" — not a brand primary.
+ * states, positive actions" — not a brand primary. An earlier revision
+ * swapped sodalite out for malachite on accessibility grounds; those
+ * grounds did not hold (see below), and the swap put another brand's
+ * colour on this site.
  *
- * An earlier revision of this file swapped sodalite out for malachite on
- * the grounds that sodalite's dark variant "measured 3.78:1 against this
- * same background — a real failure". That reasoning does not hold. The
- * gate is 3:1, which 3.78:1 clears; and the swap did not achieve what it
- * claimed, because malachite's own darkHex (#64FFDA) measures 1.12:1
- * against the light background and fails outright. Measured per variant
- * against the background each one actually renders on, sodalite is fine:
- * #283593 gives 9.35:1 on #F3F3F1, #3D5AFE gives 3.78:1 on #0E0D0C.
+ * On the light/dark pair, measured with APCA 3.0 — Mzizi's actual stated
+ * standard, not WCAG:
  *
- * Note also that Mzizi's stated contrast standard is APCA 3.0 AAA, not
- * WCAG — a different algorithm, so WCAG ratios are a floor here, not the
- * system's own bar.
+ *   light mode  #283593  on #F3F3F1  Lc  86.3   (sodalite lightHex)
+ *   dark mode   #C6CFFF  on #0E0D0C  Lc -78.5
+ *
+ * Both clear Lc 75, APCA's minimum for body-size text, which is the right
+ * bar because these render as links and buttons.
+ *
+ * #C6CFFF is derived rather than published: it is sodalite's A100 step
+ * (#8C9EFF) lightened 50% toward white. Mzizi's published darkHex
+ * (#3D5AFE) is NOT usable for text on this background — it scores APCA
+ * Lc -26.9, below even the Lc 30 floor for non-text UI, despite passing
+ * WCAG at 3.78:1. That gap is exactly why the system specifies APCA:
+ * the ratio says fine, the perceptual model says unreadable, and the
+ * perceptual model is right.
+ *
+ * scripts/check-contrast.mjs enforces the above in CI.
  *
  * The ramp below is not invented — it's linearly interpolated (with an
  * ease-in-out curve for perceptual spacing) between Mzizi's own canonical
