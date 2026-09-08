@@ -6,14 +6,20 @@
  * needed. See https://www.mintlify.com/docs/customize/custom-scripts.
  *
  * What's native to docs.json already (not duplicated here): theme, the
- * primary/light/dark brand color (sodalite, per Mzizi's mineral tokens —
- * `--color-sodalite` is #283593 / #3D5AFE, exactly what's already set),
+ * primary/light/dark brand color (Mzizi's malachite mineral token —
+ * `--color-malachite`, lightHex #004D40 / darkHex #64FFDA — swapped in for
+ * sodalite/cobalt because it's the only mineral in the palette that clears
+ * WCAG AA in both directions against the site's own background: 8.85:1 for
+ * the light-mode green-on-cream pairing, 15.59:1 for the dark-mode
+ * mint-on-near-black pairing, both AAA. Sodalite's dark variant measured
+ * 3.78:1 against this same background — a real failure, not a nitpick),
  * the page background colors and decoration, and the heading/body font
  * pair (Noto Serif / Noto Sans, per Mzizi's typography tokens — chosen
  * ecosystem-wide for broad African-language and diacritic support, not
- * a docs-specific pick). This file exists for the one thing docs.json has
- * no field for: the full neutral (gray) ramp Mintlify uses across borders,
- * muted text, and code block chrome.
+ * a docs-specific pick). This file exists for two things docs.json has no
+ * field for: the full neutral (gray) ramp Mintlify uses across borders,
+ * muted text, and code block chrome; and base font sizing (docs.json's
+ * `fonts` field controls family/weight only, not size).
  *
  * The ramp below is not invented — it's linearly interpolated (with an
  * ease-in-out curve for perceptual spacing) between Mzizi's own canonical
@@ -47,4 +53,23 @@
   --gray-800: 38 37 36;
   --gray-900: 20 19 18;
   --gray-950: 14 13 12;
+}
+
+/*
+ * Mintlify's body/prose text renders in rem units, cascaded from the root
+ * font-size — so this is the one lever that reaches body copy, sidebar
+ * links, and code blocks together without hardcoding theme-internal class
+ * names that could change under us on a Mintlify upgrade. Bumped from the
+ * browser default of 16px; mobile gets a second, larger bump on top of
+ * that rather than just inheriting the desktop value, because narrow
+ * viewports are exactly where "the font is small" was reported from.
+ */
+html {
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 18px;
+  }
 }

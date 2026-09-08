@@ -3,9 +3,9 @@
   "theme": "sequoia",
   "name": "Shamwari",
   "colors": {
-    "primary": "#283593",
-    "light": "#3d5afe",
-    "dark": "#283593"
+    "primary": "#004D40",
+    "light": "#64FFDA",
+    "dark": "#64FFDA"
   },
   "background": {
     "color": {
@@ -57,8 +57,8 @@
     ]
   },
   "logo": {
-    "light": "/images/logo-light.png",
-    "dark": "/images/logo-dark.png"
+    "light": "/images/logo-light.svg",
+    "dark": "/images/logo-dark.svg"
   },
   "navbar": {
     "links": [
