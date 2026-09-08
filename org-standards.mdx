@@ -1,1 +1,257 @@
-LS0tCnRpdGxlOiAiT3JnIENJICYgR292ZXJuYW5jZSBTdGFuZGFyZHMiCmRlc2NyaXB0aW9uOiAiV2hhdCBzaGFtd2FyaS1haS8uZ2l0aHViIGFjdHVhbGx5IHByb3ZpZGVzIHRvZGF5LCB3aGF0IHNoYW13YXJpLWFpL3NoYW13YXJpJ3MgQ0kgZW5mb3JjZXMsIGFuZCB3aGVyZSB0aGUgZ2FwcyBhcmUiCi0tLQoKPE5vdGU+CiAgVGhpcyBwYWdlIGRlc2NyaWJlcyB0aGUgKipjdXJyZW50LCBhY3R1YWwqKiBzdGF0ZSBvZiBnb3Zlcm5hbmNlIGFjcm9zcyB0aGUKICBgc2hhbXdhcmktYWlgIG9yZywgYXMgb2YgdGhpcyB3cml0aW5nLiBXaGVyZSBzb21ldGhpbmcgaXMgYSBwcm9wb3NhbCByYXRoZXIKICB0aGFuIHNvbWV0aGluZyBydW5uaW5nIHRvZGF5LCBpdCdzIGNhbGxlZCBvdXQgZXhwbGljaXRseSB1bmRlcgogIFtLbm93biBnYXBzXSgja25vd24tZ2Fwcykg4oCUIG5vdGhpbmcgaGVyZSBzaG91bGQgYmUgcmVhZCBhcyBhbHJlYWR5IGNvZGlmaWVkCiAgdW5sZXNzIGl0IHNheXMgc28uCjwvTm90ZT4KCiMjIFJlcG9zIHRoaXMgY292ZXJzCgotICoqW3NoYW13YXJpLWFpLy5naXRodWJdKGh0dHBzOi8vZ2l0aHViLmNvbS9zaGFtd2FyaS1haS8uZ2l0aHViKSoqIOKAlCB0aGUgb3JnJ3MKICBkZWZhdWx0IGNvbW11bml0eS1oZWFsdGggcmVwby4gR2l0SHViIGZhbGxzIGJhY2sgdG8gd2hhdGV2ZXIgbGl2ZXMgaGVyZSBmb3IKICBhbnkgcmVwbyB0aGF0IGRvZXNuJ3QgZGVmaW5lIGl0cyBvd24gaXNzdWUvUFIgdGVtcGxhdGVzLCBgQ09ERU9XTkVSU2AsIG9yCiAgYFNFQ1VSSVRZLm1kYC4KLSAqKltzaGFtd2FyaS1haS9zaGFtd2FyaV0oaHR0cHM6Ly9naXRodWIuY29tL3NoYW13YXJpLWFpL3NoYW13YXJpKSoqIOKAlCB0aGUKICBwcm9kdWN0IG1vbm9yZXBvIChgZ2F0ZXdheS9gLCBgY29yZS9gLCBgZG9jcy1zaXRlL2AsIGBzaXRlL2ApLiBJdHMKICBgQ0xBVURFLm1kYCBpcyB0aGUgYXV0aG9yaXRhdGl2ZSBzb3VyY2UgZm9yICp3aHkqIHNldmVyYWwgb2YgdGhlc2UgY2hlY2tzCiAgZXhpc3Q7IHRoaXMgcGFnZSBkb2Vzbid0IHJlc3RhdGUgdGhhdCByZWFzb25pbmcsIGl0IG1hcHMgaXQgb250byB0aGUgQ0kgdGhhdAogIHJ1bnMuCi0gKipzaGFtd2FyaS1haS9kb2NzKiog4oCUIHRoaXMgcmVwby4KCiMjIFJldXNhYmxlIHdvcmtmbG93cyDigJQgdGhlcmUgYXJlbid0IGFueSB5ZXQKCkEgcmV1c2FibGUgd29ya2Zsb3cgaXMgYSBgLnltbGAgZmlsZSB1bmRlciBgLmdpdGh1Yi93b3JrZmxvd3MvYCB3aXRoCmBvbjogd29ya2Zsb3dfY2FsbGAsIGNhbGxlZCBmcm9tIGFub3RoZXIgcmVwbyB3aXRoCmB1c2VzOiBzaGFtd2FyaS1haS8uZ2l0aHViLy5naXRodWIvd29ya2Zsb3dzLzxuYW1lPi55bWxAbWFpbmAuIEFzIG9mIHRoaXMKd3JpdGluZywgKipgc2hhbXdhcmktYWkvLmdpdGh1YmAgY29udGFpbnMgYSBzaW5nbGUgZmlsZTogYSBvbmUtbGluZQpgUkVBRE1FLm1kYC4qKiBUaGVyZSBpcyBubyBgLmdpdGh1Yi93b3JrZmxvd3MvYCBkaXJlY3RvcnksIG5vIGBDT0RFT1dORVJTYCwgbm8KaXNzdWUgb3IgUFIgdGVtcGxhdGVzLCBhbmQgbm8gYFNFQ1VSSVRZLm1kYC4KClByYWN0aWNhbGx5LCB0aGF0IG1lYW5zOgoKLSBObyByZXBvIGluIHRoZSBvcmcgY2FuIGN1cnJlbnRseSBgdXNlczpgIGEgc2hhcmVkIHdvcmtmbG93IOKAlCB0aGVyZSBpc24ndCBvbmUKICB0byBjYWxsLgotIEEgYnJhbmQtbmV3IHJlcG8gaW4gdGhlIG9yZyBpbmhlcml0cyAqKm5vdGhpbmcqKiBhdXRvbWF0aWNhbGx5LiBJdCBzdGFydHMKICB3aXRoIHplcm8gQ0ksIHplcm8gUFIgdGVtcGxhdGUsIHplcm8gcmVxdWlyZWQgY2hlY2tzLCB1bnRpbCBzb21lb25lIGNvcGllcwogIHRoZW0gaW4gYnkgaGFuZC4KLSBFdmVyeXRoaW5nIGRlc2NyaWJlZCBiZWxvdyBhcyAiQ0kiIGlzIGBzaGFtd2FyaS1haS9zaGFtd2FyaWAncyBvd24sCiAgcmVwby1sb2NhbCBgLmdpdGh1Yi93b3JrZmxvd3MvKi55bWxgLiBJdCBpcyB0aGUgY2xvc2VzdCB0aGluZyB0aGUgb3JnIGhhcyB0bwogIGEgcmVmZXJlbmNlIGltcGxlbWVudGF0aW9uLCBidXQgaXQgaXMgbm90IHNoYXJlZCBvciBlbmZvcmNlZCBvdXRzaWRlIHRoYXQKICBvbmUgcmVwby4KClRoaXMgaXMgdGhlIGxhcmdlc3QgY29uY3JldGUgZ2FwIOKAlCBzZWUgW0tub3duIGdhcHNdKCNrbm93bi1nYXBzKS4gSXQgaXMgYWxzbwpub3QgYSBncmVlbiBmaWVsZDogYSBtYXR1cmUsIHJlYWR5LXRvLWFkb3B0IHRlbXBsYXRlIGFscmVhZHkgZXhpc3RzIGVsc2V3aGVyZQppbiB0aGUgZWNvc3lzdGVtIOKAlCBzZWUgdGhlIG5leHQgc2VjdGlvbi4KCiMjIFJlbGF0aW9uc2hpcCB0byBOeXVjaGkgQWZyaWNhJ3Mgb3JnLXdpZGUgZGVmYXVsdHMKClNoYW13YXJpIGlzIHNvbGQgY29tbWVyY2lhbGx5IHVuZGVyIE55dWNoaSBBZnJpY2EgKHNlZSB0aGlzIG9yZydzIG93bgpgQ0xBVURFLm1kYCkuIE55dWNoaSBBZnJpY2EgYWxyZWFkeSBydW5zIGEgc2VwYXJhdGUgR2l0SHViIG9yZyDigJQKW2BueXVjaGlgXShodHRwczovL2dpdGh1Yi5jb20vbnl1Y2hpKSDigJQgd2hvc2UKW2BueXVjaGkvLmdpdGh1YmBdKGh0dHBzOi8vZ2l0aHViLmNvbS9ueXVjaGkvLmdpdGh1YikgcmVwbyBpcyBwdWJsaWMgYW5kIGlzCmV4YWN0bHkgdGhlIGtpbmQgb2Ygb3JnLXdpZGUgZ292ZXJuYW5jZSB0ZW1wbGF0ZSBgc2hhbXdhcmktYWkvLmdpdGh1YmAKY3VycmVudGx5IGxhY2tzOgoKLSAqKlJldXNhYmxlIHdvcmtmbG93cyoqIHVuZGVyIGAuZ2l0aHViL3dvcmtmbG93cy9yZXVzYWJsZS0qLnltbGAsIGluY2x1ZGluZwogIGByZXVzYWJsZS1jaS10eXBlc2NyaXB0LnltbGAsIGByZXVzYWJsZS1jaS10eXBlc2NyaXB0LWxpYi55bWxgLAogIGByZXVzYWJsZS1jaS1weXRob24tbW9ub3JlcG8ueW1sYCwgYHJldXNhYmxlLWNpLWRvY3MtbWR4LnltbGAsCiAgYHJldXNhYmxlLXByLXRpdGxlLWxpbnQueW1sYCwgYHJldXNhYmxlLWNvZGVxbC55bWxgLAogIGByZXVzYWJsZS1kZXBlbmRlbmN5LXJldmlldy55bWxgLCBgcmV1c2FibGUtc2JvbS55bWxgLAogIGByZXVzYWJsZS1zbHNhLXByb3ZlbmFuY2UueW1sYCwgYHJldXNhYmxlLW9wZW5zc2Ytc2NvcmVjYXJkLnltbGAsIGFuZAogIGByZXVzYWJsZS1zdGFsZS55bWxgIOKAlCBzZXZlcmFsIG9mIHdoaWNoIChDb2RlUUwsIGRlcGVuZGVuY3kgcmV2aWV3LCBTQk9NLAogIFNMU0EgcHJvdmVuYW5jZSwgU2NvcmVjYXJkKSBgc2hhbXdhcmktYWkvc2hhbXdhcmlgJ3MgbG9jYWwgYGNpLnltbGAgZG9lc24ndAogIHJ1biBhdCBhbGwgdG9kYXkuCi0gKipTdGFydGVyIHRlbXBsYXRlcyBtZWFudCB0byBiZSBjb3BpZWQgYW5kIGFkYXB0ZWQqKjogYENPREVPV05FUlMuZXhhbXBsZWAKICBhbmQgYC5naXRodWIvZGVwZW5kYWJvdC5leGFtcGxlLnltbGAuCi0gKipSZWFsLCBwb3B1bGF0ZWQgY29tbXVuaXR5LWhlYWx0aCBmaWxlcyoqOiBgLmdpdGh1Yi9QVUxMX1JFUVVFU1RfVEVNUExBVEUubWRgLAogIGAuZ2l0aHViL0lTU1VFX1RFTVBMQVRFLyoueW1sYCwgYFNFQ1VSSVRZLm1kYCwgYENPREVfT0ZfQ09ORFVDVC5tZGAsCiAgYENPTlRSSUJVVElORy5tZGAsIGBTVVBQT1JULm1kYCwgYENMQS5tZGAuCi0gKipgT1JHX1NFVFRJTkdTLm1kYCoqIHBsdXMgYWN0dWFsIGBnaXRodWItcnVsZXNldHMvKi5qc29uYCBydWxlc2V0CiAgZGVmaW5pdGlvbnMg4oCUIGJyYW5jaCBwcm90ZWN0aW9uIGFzIHJldmlld2FibGUsIHZlcnNpb25lZCBKU09OIHJhdGhlciB0aGFuCiAgb25seSBkYXNoYm9hcmQgY29uZmlndXJhdGlvbiAocmVsZXZhbnQgdG8gZ2FwcyAzIGFuZCA1IGJlbG93KS4KLSAqKmBwcm9maWxlL2dvdmVybmFuY2UvTkEtMDEvMDIvMDNgKiog4oCUIGEgY29ycG9yYXRlIGNvbnN0aXR1dGlvbiwgYW4KICBvcGVuLXNvdXJjZSBnb3Zlcm5hbmNlIHBvbGljeSwgYW5kIGFuIGVuZ2luZWVyaW5nIHdvcmtpbmcgYWdyZWVtZW50LgogIGBOQS0wM19FTkdJTkVFUklORy5tZGAgZXhwbGljaXRseSBzY29wZXMgaXRzZWxmIHRvICJQbGF0Zm9ybSBhbmQgcHJvZHVjdAogIHdvcmsgKE11a29rbywgTnl1Y2hpIEVudGVycHJpc2UsIHNpc3RlciBicmFuZHMuLi4pIiDigJQgU2hhbXdhcmksIGFzIGEgTnl1Y2hpCiAgQWZyaWNhIGNvbW1lcmNpYWwgcHJvZHVjdCwgZmFsbHMgdW5kZXIgdGhhdCBkZXNjcmlwdGlvbi4KCioqTm9uZSBvZiB0aGlzIHJlYWNoZXMgYHNoYW13YXJpLWFpYCBhdXRvbWF0aWNhbGx5LioqIGBueXVjaGlgIGFuZApgc2hhbXdhcmktYWlgIGFyZSBzZXBhcmF0ZSBHaXRIdWIgb3Jncy4gVGhlIGZhbGxiYWNrIG1lY2hhbmlzbSB0aGF0IG1ha2VzCmBzaGFtd2FyaS1haS8uZ2l0aHViYCBhcHBseSB0byBhbnkgcmVwbyAqaW5zaWRlKiBgc2hhbXdhcmktYWlgIGlzIHNjb3BlZCB0bwp0aGF0IG9uZSBvcmcg4oCUIGl0IGhhcyBubyBjcm9zcy1vcmcgZXF1aXZhbGVudC4gTm90aGluZyBpbiBgbnl1Y2hpLy5naXRodWJgCmN1cnJlbnRseSBwcm9wYWdhdGVzIGludG8gYHNoYW13YXJpLWFpYCBvbiBpdHMgb3duOyBldmVyeSBhZG9wdGlvbiBpcyBhCmRlbGliZXJhdGUgY29weSAoZm9yIHRlbXBsYXRlcywgYENPREVPV05FUlNgLCBgU0VDVVJJVFkubWRgKSBvciBhbiBleHBsaWNpdApgdXNlczogbnl1Y2hpLy5naXRodWIvLmdpdGh1Yi93b3JrZmxvd3MvPG5hbWU+LnltbEBtYWluYCByZWZlcmVuY2UgaW5zaWRlIGEKd29ya2Zsb3cgZmlsZSAoZm9yIHRoZSByZXVzYWJsZSB3b3JrZmxvd3Mg4oCUIHBlcm1pdHRlZCBhY3Jvc3Mgb3JncyBzaW5jZSB0aGUKcmVwbyBpcyBwdWJsaWMpLgoKKipUaGUgcmVjb21tZW5kZWQgcGF0aCBpcyBhZG9wdGlvbiwgbm90IHJlaW52ZW50aW9uKio6IGNvcHkvYWRhcHQgdGhlCnRlbXBsYXRlcyBhYm92ZSBpbnRvIGBzaGFtd2FyaS1haS8uZ2l0aHViYCwgYW5kIGxldApgc2hhbXdhcmktYWkvc2hhbXdhcmlgJ3MgYGNpLnltbGAvYHByLXRpdGxlLWxpbnQueW1sYCBiZWNvbWUgdGhpbiBjYWxsZXJzIG9mCnRoZSBtYXRjaGluZyBgbnl1Y2hpYCByZXVzYWJsZSB3b3JrZmxvd3MgKFR5cGVTY3JpcHQgZm9yIGBnYXRld2F5L2AsCmRvY3MtbWR4IGZvciBgZG9jcy1zaXRlL2AsIGBzaXRlL2AsIGFuZCB0aGlzIHJlcG8sIGByZXVzYWJsZS1wci10aXRsZS1saW50LnltbGAKaW5zdGVhZCBvZiB0aGUgbG9jYWwgZHVwbGljYXRlKS4gT25lIGZpdCBwcm9ibGVtLCBmbGFnZ2VkIHJhdGhlciB0aGFuIHBhcGVyZWQKb3ZlcjogYHJldXNhYmxlLWNpLXB5dGhvbi1tb25vcmVwby55bWxgIGFzc3VtZXMgYSAqKnV2IHdvcmtzcGFjZSoqIChyb290CmBweXByb2plY3QudG9tbGAgd2l0aCBgW3Rvb2wudXYud29ya3NwYWNlXWAsIGEgY29tbWl0dGVkIGB1di5sb2NrYCwgcGFja2FnZXMKdW5kZXIgYHBhY2thZ2VzLzxuYW1lPi9gKS4gYGNvcmUvYCdzIGFjdHVhbCBkZXBlbmRlbmN5IHNldHVwIGlzCmByZXF1aXJlbWVudHMuaW5gIOKGkiBgcGlwLWNvbXBpbGUgLS1nZW5lcmF0ZS1oYXNoZXNgIOKGkiBgcmVxdWlyZW1lbnRzLnR4dGAsIGEKZGlmZmVyZW50IHNoYXBlIGVudGlyZWx5IOKAlCB0aGlzIHJldXNhYmxlIHdvcmtmbG93IGlzICoqbm90KiogYSBkcm9wLWluCnJlcGxhY2VtZW50IGZvciBgY29yZWAncyBDSSBqb2Igd2l0aG91dCBlaXRoZXIgbWlncmF0aW5nIGBjb3JlL2AgdG8gYSB1dgp3b3Jrc3BhY2Ugb3IgYWRhcHRpbmcgdGhlIHdvcmtmbG93IChvciB3cml0aW5nIGEgbmV3IG9uZSkgdG8gdGhlCmxvY2stYW5kLWhhc2ggcGF0dGVybiBgQ0xBVURFLm1kYCByZXF1aXJlcy4gTm9uZSBvZiB0aGlzIGlzIGltcGxlbWVudGVkIGluCnRoaXMgcGFzcyDigJQgc2VlIHRoZSB0cmFja2VkIGlzc3VlcyBsaW5rZWQgZnJvbSBLbm93biBnYXBzIGJlbG93LgoKIyMgQ0kgdGhhdCBhY3R1YWxseSBydW5zLCB0b2RheSAoYHNoYW13YXJpLWFpL3NoYW13YXJpYCkKClR3byB3b3JrZmxvdyBmaWxlcywgYm90aCByZXBvLWxvY2FsOgoKPENhcmRHcm91cCBjb2xzPXsyfT4KICA8Q2FyZCB0aXRsZT0iY2kueW1sIiBpY29uPSJjaXJjbGUtY2hlY2siPgogICAgRml2ZSBqb2JzOiBgZ2F0ZXdheWAsIGBjb3JlYCwgYGRvY3Mtc2l0ZWAsIGBzaXRlYCwgYGdpdGxlYWtzYC4gUnVucyBvbiBwdXNoCiAgICB0byBgbWFpbmAgYW5kIG9uIHB1bGwgcmVxdWVzdHMgdGFyZ2V0aW5nIGBtYWluYCAqKm9yKiogYGNsYXVkZS8qKmAuCiAgPC9DYXJkPgogIDxDYXJkIHRpdGxlPSJwci10aXRsZS1saW50LnltbCIgaWNvbj0idGFnIj4KICAgIE9uZSBqb2IgZW5mb3JjaW5nIENvbnZlbnRpb25hbCBDb21taXRzIG9uIHRoZSBQUiB0aXRsZSwgdmlhCiAgICBgYW1hbm5uL2FjdGlvbi1zZW1hbnRpYy1wdWxsLXJlcXVlc3RgLgogIDwvQ2FyZD4KPC9DYXJkR3JvdXA+CgojIyMgV2h5IFBScyBhcmUgY2hlY2tlZCBhZ2FpbnN0IGBjbGF1ZGUvKipgLCBub3QganVzdCBgbWFpbmAKCmBgYHlhbWwKb246CiAgcHVzaDoKICAgIGJyYW5jaGVzOiBbbWFpbl0KICBwdWxsX3JlcXVlc3Q6CiAgICBicmFuY2hlczogW21haW4sICJjbGF1ZGUvKioiXQpgYGAKClN0YWNrZWQgUFJzIHRhcmdldCB0aGUgYnJhbmNoIGJlbG93IHRoZW0gaW4gdGhlIHN0YWNrLCBub3QgYG1haW5gLiBBIGZpbHRlciBvZgpqdXN0IGBbbWFpbl1gIHdvdWxkIHNpbGVudGx5IGdpdmUgZXZlcnkgbGF5ZXIgYnV0IHRoZSBib3R0b20gb25lIHplcm8gQ0kg4oCUIGEKZ3JlZW4gUFIgd2l0aCBubyBjaGVja3MgcnVuLCB3aGljaCBsb29rcyBpZGVudGljYWwgdG8gYSBwYXNzaW5nIG9uZS4gS2VlcCB0aGlzCmluIG1pbmQgaWYgeW91J3JlIHNldHRpbmcgdXAgQ0kgZm9yIGEgbmV3IHJlcG86IGZpbHRlcmluZyBQUiB0cmlnZ2VycyB0bwpgbWFpbmAgYWxvbmUgaXMgdGhlIG1pc3Rha2UgdGhpcyBwYXR0ZXJuIGV4aXN0cyB0byBhdm9pZC4KCiMjIyBUaGUgYGNpLnltbGAgam9icwoKfCBKb2IgfCBXaGF0IGl0IGRvZXMgfCBXaHkgfAp8LS0tfC0tLXwtLS18CnwgKipnYXRld2F5KiogfCBgbnBtIHJ1biB0eXBlY2hlY2tgIGFuZCBgbnBtIHRlc3RgIGluIGBnYXRld2F5L2AgfCBQZXIgYENMQVVERS5tZGAsIGdhdGV3YXkgdW5pdCB0ZXN0cyBhcmUgd2hhdCBjb3ZlciB0aGUgdHdvIHJ1bGVzIHRoYXQgbXVzdCBub3QgYmUgYnJva2VuOiBwZXJzb25hbC1zY29wZSByZXF1ZXN0cyBuZXZlciByZXNvbHZlIHRvIGEgY2xvdWQgZGVzdGluYXRpb24sIGFuZCB0aGUgcHJlbWl1bSB0aWVyIHN0YXlzIGBsaWNlbnNlQ2xhc3M6IHJlc3RyaWN0ZWRgLiB8CnwgKipjb3JlKiogfCBgcHl0aG9uIGNoZWNrX2xvY2sucHlgLCB0aGVuIGBwaXAgaW5zdGFsbCAtLXJlcXVpcmUtaGFzaGVzIC1yIHJlcXVpcmVtZW50cy50eHRgLCB0aGVuIGFuIGltcG9ydCBjaGVjayB8IGBjb3JlL3JlcXVpcmVtZW50cy50eHRgIGlzIGdlbmVyYXRlZCBieSBgcGlwLWNvbXBpbGUgLS1nZW5lcmF0ZS1oYXNoZXNgIGZyb20gdGhlIGhhbmQtZWRpdGVkIGByZXF1aXJlbWVudHMuaW5gIGFuZCBtdXN0IG5ldmVyIGJlIGhhbmQtZWRpdGVkLiBgY2hlY2tfbG9jay5weWAgZmFpbHMgaWYgdGhlIHNwZWMgbmFtZXMgc29tZXRoaW5nIHRoZSBsb2NrIGRvZXNuJ3QgcGluLCBvZmZsaW5lIGFuZCBiZWZvcmUgaW5zdGFsbCwgc28gYSBzdGFsZSBsb2NrIGlzIG5hbWVkIGFzIHN1Y2ggaW5zdGVhZCBvZiBzdXJmYWNpbmcgYXMgYSBjb25mdXNpbmcgYEltcG9ydEVycm9yYC4gYC0tcmVxdWlyZS1oYXNoZXNgIGlzIHRoZXJlIHNvIGEgZGVwZW5kZW5jeSBsaW5lICp3aXRob3V0KiBhIGhhc2ggZmFpbHMgdGhlIGluc3RhbGwsIHJhdGhlciB0aGFuIHF1aWV0bHkgd2Vha2VuaW5nIHRoZSBndWFyYW50ZWUgZm9yIHRoZSB3aG9sZSBmaWxlLiB8CnwgKipkb2NzLXNpdGUqKiB8IGBucG0gcnVuIGJ1aWxkYCwgdGhlbiBgbnBtIHJ1biBjaGVja2AgfCBgYXN0cm8gY2hlY2tgIGNvdmVycyB0eXBlcy9NRFg7IHRoZSByZXBvJ3Mgb3duIGBjaGVjay5tanNgIGNvdmVycyB3aGF0IGl0IGNhbid0IOKAlCBkZWFkIGxpbmtzL2Fzc2V0cywgY29sb3JzIHdpdGggbm8gYmFzZSBgOnJvb3RgIHRva2VuLCBzdHJheSBjbGllbnQgSlMsIGEgc2l6ZSBidWRnZXQsIGFuZCB0aGUgIm9wZW4gd2VpZ2h0cyIgbGFuZ3VhZ2UtZGlzY2lwbGluZSB3b3JkaW5nIHJ1bGUuIHwKfCAqKnNpdGUqKiB8IFNhbWUgc2hhcGUgYXMgYGRvY3Mtc2l0ZWAsIGZvciB0aGUgbWFya2V0aW5nIHNpdGUgfCBTYW1lIHJhdGlvbmFsZSwgYXBwbGllZCB0byBgc2l0ZS9gLiB8CnwgKipnaXRsZWFrcyoqIHwgRG93bmxvYWRzIHRoZSBgZ2l0bGVha3NgIGJpbmFyeSBkaXJlY3RseSBhbmQgcnVucyBgZ2l0bGVha3MgZGV0ZWN0IC0tc291cmNlIC4gLS1yZWRhY3QgLS1uby1iYW5uZXIgLS12ZXJib3NlYCB8IFRoZSBgZ2l0bGVha3MvZ2l0bGVha3MtYWN0aW9uYCB3cmFwcGVyIG5vdyByZXF1aXJlcyBhIHBhaWQgbGljZW5zZSBmb3Igb3JnIHJlcG9zOyB0aGUgdW5kZXJseWluZyBiaW5hcnkgaXMgc3RpbGwgTUlULWxpY2Vuc2VkLCBzbyB0aGUgd29ya2Zsb3cgcnVucyBpdCBkaXJlY3RseSB0byBrZWVwIHRoZSBzY2FuIGZyZWUuIHwKCmBjaS55bWxgIHNldHMgb25lIGBjb25jdXJyZW5jeWAgZ3JvdXAgZm9yIHRoZSB3aG9sZSB3b3JrZmxvdyDigJQKYCR7eyBnaXRodWIud29ya2Zsb3cgfX0tJHt7IGdpdGh1Yi5yZWYgfX1gLCBgY2FuY2VsLWluLXByb2dyZXNzOiB0cnVlYCDigJQgc28KYSBuZXcgcHVzaCB0byB0aGUgc2FtZSBQUiBvciBicmFuY2ggY2FuY2VscyB0aGUgYGNpLnltbGAgcnVuIGluIGZsaWdodCByYXRoZXIKdGhhbiBxdWV1aW5nIGJlaGluZCBpdC4gYHByLXRpdGxlLWxpbnQueW1sYCBoYXMgaXRzIG93biwgc2VwYXJhdGUgY29uY3VycmVuY3kKZ3JvdXAgKHNlZSBiZWxvdyk7IHRoZSB0d28gd29ya2Zsb3dzIGRvbid0IHNoYXJlIG9uZS4KCiMjIyBgcHItdGl0bGUtbGludC55bWxgCgpFbmZvcmNlcyBDb252ZW50aW9uYWwgQ29tbWl0cyBvbiB0aGUgUFIgdGl0bGUgKG5vdCBjb21taXQgbWVzc2FnZXMpIHZpYQpgYW1hbm5uL2FjdGlvbi1zZW1hbnRpYy1wdWxsLXJlcXVlc3RgLiBJdHMgb3duIGNvbmN1cnJlbmN5IGdyb3VwIGlzCmAke3sgZ2l0aHViLndvcmtmbG93IH19LSR7eyBnaXRodWIuZXZlbnQucHVsbF9yZXF1ZXN0Lm51bWJlciB9fWAg4oCUCmtleWVkIGJ5IFBSIG51bWJlciwgbm90IHJlZiwgc2luY2UgaXQgb25seSBldmVyIHJ1bnMgb24gYHB1bGxfcmVxdWVzdGAgZXZlbnRzLgoKLSBBbGxvd2VkIHR5cGVzOiBgZmVhdGAsIGBmaXhgLCBgcGVyZmAsIGByZWZhY3RvcmAsIGBkb2NzYCwgYHRlc3RgLCBgYnVpbGRgLAogIGBjaWAsIGBjaG9yZWAsIGByZXZlcnRgLCBgc3R5bGVgLgotIE5vIHJlcXVpcmVkIHNjb3BlLgotIFN1YmplY3QgbXVzdCBzdGFydCBsb3dlcmNhc2UsIHJlYWQgYXMgYW4gaW1wZXJhdGl2ZSwgYW5kIG5vdCBlbmQgaW4gYQogIHBlcmlvZC4KLSBgd2lwOiB0cnVlYCDigJQgZXhlbXB0cyB0aXRsZXMgdGhhdCBsaXRlcmFsbHkgKnN0YXJ0IHdpdGgqIGB3aXBgIChjYXNlCiAgaW5zZW5zaXRpdmUpLCBlLmcuIGB3aXA6IHN0aWxsIGZpZ3VyaW5nIG91dCB0aGUgc2NoZW1hYC4gVGhpcyBpcyAqKm5vdCoqCiAgdGhlIHNhbWUgdGhpbmcgYXMgR2l0SHViJ3MgZHJhZnQtUFIgZmxhZzogYSBkcmFmdCBQUiB3aXRoIGFuIG9yZGluYXJ5IHRpdGxlCiAgc3RpbGwgZ2V0cyBjaGVja2VkIGFuZCBjYW4gc3RpbGwgZmFpbC4gKFBSICMyNCBpbiBgc2hhbXdhcmktYWkvc2hhbXdhcmlgCiAgaXMgYSBsaXZlIGV4YW1wbGUg4oCUIGl0IHdhcyBhIGRyYWZ0IHdpdGggYSBub24tYHdpcGAgdGl0bGUgYW5kIHRoZSBjaGVjawogIGZhaWxlZCB1bnRpbCB0aGUgdGl0bGUgd2FzIGZpeGVkLikKCiMjIEJyYW5jaCBhbmQgUFIgcmVxdWlyZW1lbnRzCgotICoqQ29udmVudGlvbmFsIENvbW1pdCBQUiB0aXRsZXMqKiBhcmUgZW5mb3JjZWQgYnkgdGhlIGNoZWNrIGFib3ZlIG9uIGV2ZXJ5CiAgUFIgYWdhaW5zdCBgc2hhbXdhcmktYWkvc2hhbXdhcmlgLgotICoqQ0kgbXVzdCBwYXNzKiogb24gYG1haW5gIGFuZCBgY2xhdWRlLyoqYCDigJQgc2VlIHRoZSB0cmlnZ2VyIHJhdGlvbmFsZQogIGFib3ZlIGlmIHlvdSdyZSBhZGRpbmcgYSB3b3JrZmxvdyB0byBhIG5ldyByZXBvLgotICoqQW4gYXV0b21hdGVkIHJldmlldyBnYXRlIOKAlCAiQ2xhdWRlIEFwcHJvdmFscyIg4oCUIGlzIHVzZWQgb24gUFJzIGluIHRoaXMKICBvcmcuKiogVGhpcyB3YXNuJ3QgZm91bmQgY29kaWZpZWQgYXMgYSB3b3JrZmxvdyBmaWxlLCBgQ09ERU9XTkVSU2AgcnVsZSwgb3IKICBicmFuY2gtcHJvdGVjdGlvbiBzZXR0aW5nIHJlYWRhYmxlIHdpdGggdGhpcyBwYXNzJ3MgY3JlZGVudGlhbHMgaW4gYW55IG9mCiAgdGhlIHRocmVlIHJlcG9zIGluc3BlY3RlZCAoYSBkaXJlY3QgYnJhbmNoLXByb3RlY3Rpb24gQVBJIHJlYWQgcmV0dXJuZWQKICBgNDAzYCwgbm90ICJub3QgY29uZmlndXJlZCIg4oCUIHRoaXMgcGFzcyBzaW1wbHkgY291bGRuJ3Qgc2VlIGl0LCBzbyB0cmVhdAogICJub3QgZm91bmQgaW4gY29kZSIgYXMgIm5vdCB5ZXQgaW5zcGVjdGFibGUsIiBub3QgImRvZXNuJ3QgZXhpc3QiKS4gSXQKICBiZWhhdmVzIGxpa2UgYSByZXF1aXJlZCBzdGF0dXMgY2hlY2sgYmFja2VkIGJ5IGEgYm90L0dpdEh1YiBBcHAgcmF0aGVyIHRoYW4KICBhbiBpbi1yZXBvIHdvcmtmbG93LiBVbnRpbCBzb21lb25lIHdpdGggYWRtaW4gYWNjZXNzIGNvbmZpcm1zIGFuZCBkb2N1bWVudHMKICBpdHMgZXhhY3QgY29uZmlndXJhdGlvbiwgZG9uJ3QgYXNzdW1lIHRoaXMgcGFnZSdzIHNpbGVuY2Ugb24gaXQgbWVhbnMgaXQKICBpc24ndCByZXF1aXJlZCDigJQgYXNrIGJlZm9yZSByZWx5aW5nIG9uIGl0cyBhYnNlbmNlLgotICoqTm8gYENPREVPV05FUlNgIGZpbGUgZXhpc3RzKiogaW4gYW55IG9mIHRoZSB0aHJlZSByZXBvcywgc28gcmV2aWV3IHJvdXRpbmcKICBpcyBtYW51YWwgdG9kYXkg4oCUIHRoZXJlJ3Mgbm8gYXV0b21hdGljIHJldmlld2VyIGFzc2lnbm1lbnQgYnkgcGF0aC4KLSAqKk5vIFBSIG9yIGlzc3VlIHRlbXBsYXRlIGV4aXN0cyoqIGluIGFueSBvZiB0aGUgdGhyZWUgcmVwb3MuIE5vdGhpbmcgaW4KICBgLmdpdGh1Yi9QVUxMX1JFUVVFU1RfVEVNUExBVEUubWRgLCBgLmdpdGh1Yi9JU1NVRV9URU1QTEFURS9gLCBvciB0aGUgb3JnCiAgZGVmYXVsdCBsb2NhdGlvbiBpbiBgc2hhbXdhcmktYWkvLmdpdGh1YmAuCgojIyBCZXN0IHByYWN0aWNlcyBhY3R1YWxseSBlbmZvcmNlZCAobm90IGFzcGlyYXRpb25hbCkKClB1bGxlZCBmcm9tIHdoYXQgdGhlIHdvcmtmbG93IGZpbGVzIGFjdHVhbGx5IGRvLCBub3QgZnJvbSB3aGF0IHdvdWxkIGJlIG5pY2U6CgotICoqUGlubmVkLCBoYXNoZWQgZGVwZW5kZW5jaWVzIGZvciBhbnl0aGluZyB0aGF0IGVuZm9yY2VzIHRoZSBzY29wZSBnYXRlLioqCiAgYGNvcmUvYCdzIENJIGZhaWxzIGJlZm9yZSBpbnN0YWxsIGlmIHRoZSBsb2NrZmlsZSBkb2Vzbid0IG1hdGNoIHRoZSBzcGVjLAogIGFuZCBmYWlscyBpbnN0YWxsIGlmIGFueSBwaW5uZWQgbGluZSBpcyBtaXNzaW5nIGEgaGFzaC4gVGhpcyBleGlzdHMgYmVjYXVzZQogIGBjb3JlL21haW4ucHk6OnJlc29sdmVfc2NvcGVgIGlzIHRoZSBhdXRob3JpdGF0aXZlIGhhbGYgb2YgcnVsZSAxCiAgKHBlcnNvbmFsLXNjb3BlIGRhdGEgbXVzdCBuZXZlciByZWFjaCBhIHRoaXJkLXBhcnR5IGluZmVyZW5jZSBwcm92aWRlcikg4oCUCiAgc2VlIGBzaGFtd2FyaS1haS9zaGFtd2FyaWAncyBgQ0xBVURFLm1kYC4KLSAqKlNlY3JldCBzY2FubmluZyBvbiBldmVyeSBwdXNoIGFuZCBQUioqLCBydW5uaW5nIHRoZSByYXcgYGdpdGxlYWtzYCBiaW5hcnkKICByYXRoZXIgdGhhbiBhIHdyYXBwZXIgYWN0aW9uLCBzcGVjaWZpY2FsbHkgdG8gYXZvaWQgYSBsaWNlbnNpbmcgZGVwZW5kZW5jeS4KLSAqKkRvY3MgYW5kIG1hcmtldGluZyBzaXRlcyBhcmUgYnVpbGQtY2hlY2tlZCwgbm90IGp1c3QgZGVwbG95ZWQuKioKICBgZG9jcy1zaXRlYCBhbmQgYHNpdGVgIGJvdGggcnVuIGBhc3RybyBjaGVja2AgcGx1cyBhIGN1c3RvbSBgY2hlY2subWpzYCB0aGF0CiAgZW5mb3JjZXMgbGluay9hc3NldCBpbnRlZ3JpdHksIGEgc2l6ZSBidWRnZXQsIGFuZCB0aGUgb3JnJ3Mgb3duCiAgbGFuZ3VhZ2UtZGlzY2lwbGluZSBydWxlIChlLmcuICJvcGVuIHdlaWdodHMsIiBuZXZlciAib3BlbiBzb3VyY2UgbW9kZWwiIOKAlAogIHNlZSB0aGUgTGFuZ3VhZ2UgZGlzY2lwbGluZSB0YWJsZSBpbiBgc2hhbXdhcmktYWkvc2hhbXdhcmlgJ3MgYENMQVVERS5tZGApLgotICoqRXZlcnkgd29ya2Zsb3cgY2FuY2VscyBzdXBlcnNlZGVkIHJ1bnMgb2YgaXRzZWxmKiosIGVhY2ggdmlhIGl0cyBvd24KICBgY29uY3VycmVuY3lgIGdyb3VwIChzZWUgYWJvdmUpIOKAlCBhIG5ldyBwdXNoIGRvZXNuJ3QgbGVhdmUgYSBzdGFsZSBydW4gb2YKICB0aGF0IHdvcmtmbG93IG9jY3VweWluZyBhIHJ1bm5lci4gVGhlIHR3byB3b3JrZmxvd3MgaW4gdGhpcyByZXBvIGRvbid0CiAgc2hhcmUgYSBncm91cCB3aXRoIGVhY2ggb3RoZXIuCgojIyBLbm93biBnYXBzCgpUaGVzZSBhcmUgcmVhbCBnYXBzLCBub3QgcHJvcG9zYWxzIGRyZXNzZWQgdXAgYXMgZG9jdW1lbnRhdGlvbi4gRG9uJ3QgYnVpbGQKYWdhaW5zdCBhbnkgb2YgdGhlc2UgYXMgaWYgdGhleSBleGlzdDoKCjEuICoqTm8gcmV1c2FibGUgd29ya2Zsb3dzIGFkb3B0ZWQgaW50byBgc2hhbXdhcmktYWkvLmdpdGh1YmAgeWV0LioqIEV2ZXJ5CiAgIHJlcG8gdGhhdCB3YW50cyBDSSBzdGlsbCB3cml0ZXMgaXQgZnJvbSBzY3JhdGNoLiBBIG1hdHVyZSwgcmVhZHktdG8tYWRvcHQKICAgc2V0IGFscmVhZHkgZXhpc3RzIGF0IGBueXVjaGkvLmdpdGh1YmAgKHNlZQogICBbUmVsYXRpb25zaGlwIHRvIE55dWNoaSBBZnJpY2EncyBvcmctd2lkZSBkZWZhdWx0c10oI3JlbGF0aW9uc2hpcC10by1ueXVjaGktYWZyaWNhcy1vcmctd2lkZS1kZWZhdWx0cykKICAgYWJvdmUpIOKAlCB0aGUgZml4IGlzIGNvcHlpbmcvY2FsbGluZyB0aG9zZSwgbm90IGxpZnRpbmcgam9icyBvdXQgb2YKICAgYHNoYW13YXJpLWFpL3NoYW13YXJpYCdzIG93biBgY2kueW1sYCBpbnRvIGEgbmV3IHdvcmtmbG93IGZyb20gc2NyYXRjaC4KICAgYGNvcmUvYCdzIHV2LXdvcmtzcGFjZS12cy1waXAtY29tcGlsZSBtaXNtYXRjaCAoYWJvdmUpIG5lZWRzIHJlc29sdmluZwogICBlaXRoZXIgd2F5LCBhbmQgdGhpcyBwYWdlIHNob3VsZG4ndCBiZSByZWFkIGFzIGltcGx5aW5nIGFueSBvZiBpdCBoYXMKICAgaGFwcGVuZWQgeWV0LgoyLiAqKk5vIG9yZy1sZXZlbCBkZWZhdWx0cyBhZG9wdGVkKiog4oCUIG5vIGBDT0RFT1dORVJTYCwgbm8gUFIvaXNzdWUKICAgdGVtcGxhdGVzLCBubyBgU0VDVVJJVFkubWRgLCBpbiBgc2hhbXdhcmktYWkvLmdpdGh1YmAgb3IgYW55IG9mIHRoZSB0aHJlZQogICByZXBvcy4gYG55dWNoaS8uZ2l0aHViYCBhbHJlYWR5IHB1Ymxpc2hlcyBgQ09ERU9XTkVSUy5leGFtcGxlYCwKICAgYGRlcGVuZGFib3QuZXhhbXBsZS55bWxgLCBhbmQgcmVhbCB0ZW1wbGF0ZXMvYFNFQ1VSSVRZLm1kYCB0byBjb3B5IGFuZAogICBhZGFwdCAoc2VlIGFib3ZlKSDigJQgYENPREVPV05FUlNgIG93bmVyc2hpcCBpdHNlbGYgaXMgc3RpbGwgYSBodW1hbgogICBkZWNpc2lvbiB0aGlzIHBhZ2UgY2FuJ3QgbWFrZS4gQSBuZXcgcmVwbyBpbiBgc2hhbXdhcmktYWlgIGdldHMgbm9uZSBvZgogICB0aGlzIHVubGVzcyBzb21lb25lIGFkZHMgaXQgYnkgaGFuZCwgZXZlcnkgdGltZS4KMy4gKipUaGUgIkNsYXVkZSBBcHByb3ZhbHMiIHJldmlldyBnYXRlIGlzIG5vdCByZXByZXNlbnRlZCBhcyBjb2RlCiAgIGFueXdoZXJlIHRoaXMgcGFzcyBjb3VsZCBpbnNwZWN0LioqIElmIGl0J3MgYSByZXF1aXJlZCBzdGF0dXMgY2hlY2ssIGl0CiAgIHNob3VsZCBiZSBwb3NzaWJsZSB0byBzZWUgaXQgaW4gYnJhbmNoIHByb3RlY3Rpb24gb3IgYSBydWxlc2V0OyB0aGlzIHBhc3MncwogICB0b2tlbiBnb3QgYSBgNDAzYCByZWFkaW5nIGJyYW5jaCBwcm90ZWN0aW9uIGRpcmVjdGx5LiBTb21lb25lIHdpdGggYWRtaW4KICAgYWNjZXNzIHNob3VsZCBjb25maXJtIGl0cyBjb25maWd1cmF0aW9uIGFuZCBlaXRoZXIgZG9jdW1lbnQgaXQgaGVyZSBvcgogICAoYmV0dGVyKSBjb2RpZnkgaXQgc28gaXQncyByZXZpZXdhYmxlIGFuZCByZXByb2R1Y2libGUgZm9yIGEgbmV3IHJlcG8uCjQuICoqYHNoYW13YXJpLWFpL2RvY3NgICh0aGlzIHJlcG8pIHNoaXBzIG5vIENJIG9mIGl0cyBvd24uKiogSXQncyBzdGlsbCB0aGUKICAgdW5tb2RpZmllZCBNaW50bGlmeSBzdGFydGVyIGtpdCBhdCB0aGUgd29ya2Zsb3cgbGV2ZWwg4oCUIG5vdGhpbmcgaGVyZSBjaGVja3MKICAgYnJva2VuIGxpbmtzLCBidWlsZCBmYWlsdXJlcywgb3IgdGhlIGxhbmd1YWdlLWRpc2NpcGxpbmUgcnVsZSB0aGF0CiAgIGBzaGFtd2FyaWAncyBgZG9jcy1zaXRlYC9gc2l0ZWAgZW5mb3JjZSwgZXZlbiB0aG91Z2ggdGhpcyByZXBvIGlzCiAgIHByZXN1bWFibHkgc3ViamVjdCB0byB0aGUgc2FtZSBkaXNjaXBsaW5lLgo1LiAqKkJyYW5jaCBwcm90ZWN0aW9uIC8gcnVsZXNldHMgZm9yIHRoZXNlIHJlcG9zIGFyZW4ndCBpbnNwZWN0YWJsZSB3aXRoIHRoZQogICBjcmVkZW50aWFscyBhdmFpbGFibGUgdG8gdGhpcyBwYXNzKiogKG9yZy1sZXZlbCBlbmRwb2ludHMgYW5kIHRoZQogICBicmFuY2gtcHJvdGVjdGlvbiBlbmRwb2ludCBib3RoIGNhbWUgYmFjayBpbmFjY2Vzc2libGUpLiBBbnl0aGluZyBhYm92ZQogICBmcmFtZWQgYXMgImVuZm9yY2VkIiBpcyBlbmZvcmNlZCBpbiB0aGUgc2Vuc2UgdGhhdCBDSSBydW5zIGFuZCB3b3VsZCBmYWlsCiAgIHRoZSBjaGVjayDigJQgd2hldGhlciBpdCdzIGFsc28gY29uZmlndXJlZCBhcyBhICpyZXF1aXJlZCogY2hlY2sgdGhhdCBibG9ja3MKICAgbWVyZ2UgY291bGQgbm90IGJlIGNvbmZpcm1lZCBpbmRlcGVuZGVudGx5IGhlcmUuCg==
+---
+title: "Org CI & Governance Standards"
+description: "What shamwari-ai/.github actually provides today, what shamwari-ai/shamwari's CI enforces, and where the gaps are"
+---
+
+<Note>
+  This page describes the **current, actual** state of governance across the
+  `shamwari-ai` org, as of this writing. Where something is a proposal rather
+  than something running today, it's called out explicitly under
+  [Known gaps](#known-gaps) — nothing here should be read as already codified
+  unless it says so.
+</Note>
+
+## Repos this covers
+
+- **[shamwari-ai/.github](https://github.com/shamwari-ai/.github)** — the org's
+  default community-health repo. GitHub falls back to whatever lives here for
+  any repo that doesn't define its own issue/PR templates, `CODEOWNERS`, or
+  `SECURITY.md`.
+- **[shamwari-ai/shamwari](https://github.com/shamwari-ai/shamwari)** — the
+  product monorepo (`gateway/`, `core/`, `docs-site/`, `site/`). Its
+  `CLAUDE.md` is the authoritative source for *why* several of these checks
+  exist; this page doesn't restate that reasoning, it maps it onto the CI that
+  runs.
+- **shamwari-ai/docs** — this repo.
+
+## Reusable workflows — there aren't any yet
+
+A reusable workflow is a `.yml` file under `.github/workflows/` with
+`on: workflow_call`, called from another repo with
+`uses: shamwari-ai/.github/.github/workflows/<name>.yml@main`. As of this
+writing, **`shamwari-ai/.github` contains a single file: a one-line
+`README.md`.** There is no `.github/workflows/` directory, no `CODEOWNERS`, no
+issue or PR templates, and no `SECURITY.md`.
+
+Practically, that means:
+
+- No repo in the org can currently `uses:` a shared workflow — there isn't one
+  to call.
+- A brand-new repo in the org inherits **nothing** automatically. It starts
+  with zero CI, zero PR template, zero required checks, until someone copies
+  them in by hand.
+- Everything described below as "CI" is `shamwari-ai/shamwari`'s own,
+  repo-local `.github/workflows/*.yml`. It is the closest thing the org has to
+  a reference implementation, but it is not shared or enforced outside that
+  one repo.
+
+This is the largest concrete gap — see [Known gaps](#known-gaps). It is also
+not a green field: a mature, ready-to-adopt template already exists elsewhere
+in the ecosystem — see the next section.
+
+## Relationship to Nyuchi Africa's org-wide defaults
+
+Shamwari is sold commercially under Nyuchi Africa (see this org's own
+`CLAUDE.md`). Nyuchi Africa already runs a separate GitHub org —
+[`nyuchi`](https://github.com/nyuchi) — whose
+[`nyuchi/.github`](https://github.com/nyuchi/.github) repo is public and is
+exactly the kind of org-wide governance template `shamwari-ai/.github`
+currently lacks:
+
+- **Reusable workflows** under `.github/workflows/reusable-*.yml`, including
+  `reusable-ci-typescript.yml`, `reusable-ci-typescript-lib.yml`,
+  `reusable-ci-python-monorepo.yml`, `reusable-ci-docs-mdx.yml`,
+  `reusable-pr-title-lint.yml`, `reusable-codeql.yml`,
+  `reusable-dependency-review.yml`, `reusable-sbom.yml`,
+  `reusable-slsa-provenance.yml`, `reusable-openssf-scorecard.yml`, and
+  `reusable-stale.yml` — several of which (CodeQL, dependency review, SBOM,
+  SLSA provenance, Scorecard) `shamwari-ai/shamwari`'s local `ci.yml` doesn't
+  run at all today.
+- **Starter templates meant to be copied and adapted**: `CODEOWNERS.example`
+  and `.github/dependabot.example.yml`.
+- **Real, populated community-health files**: `.github/PULL_REQUEST_TEMPLATE.md`,
+  `.github/ISSUE_TEMPLATE/*.yml`, `SECURITY.md`, `CODE_OF_CONDUCT.md`,
+  `CONTRIBUTING.md`, `SUPPORT.md`, `CLA.md`.
+- **`ORG_SETTINGS.md`** plus actual `github-rulesets/*.json` ruleset
+  definitions — branch protection as reviewable, versioned JSON rather than
+  only dashboard configuration (relevant to gaps 3 and 5 below).
+- **`profile/governance/NA-01/02/03`** — a corporate constitution, an
+  open-source governance policy, and an engineering working agreement.
+  `NA-03_ENGINEERING.md` explicitly scopes itself to "Platform and product
+  work (Mukoko, Nyuchi Enterprise, sister brands...)" — Shamwari, as a Nyuchi
+  Africa commercial product, falls under that description.
+
+**None of this reaches `shamwari-ai` automatically.** `nyuchi` and
+`shamwari-ai` are separate GitHub orgs. The fallback mechanism that makes
+`shamwari-ai/.github` apply to any repo *inside* `shamwari-ai` is scoped to
+that one org — it has no cross-org equivalent. Nothing in `nyuchi/.github`
+currently propagates into `shamwari-ai` on its own; every adoption is a
+deliberate copy (for templates, `CODEOWNERS`, `SECURITY.md`) or an explicit
+`uses: nyuchi/.github/.github/workflows/<name>.yml@main` reference inside a
+workflow file (for the reusable workflows — permitted across orgs since the
+repo is public).
+
+**The recommended path is adoption, not reinvention**: copy/adapt the
+templates above into `shamwari-ai/.github`, and let
+`shamwari-ai/shamwari`'s `ci.yml`/`pr-title-lint.yml` become thin callers of
+the matching `nyuchi` reusable workflows (TypeScript for `gateway/`,
+docs-mdx for `docs-site/`, `site/`, and this repo, `reusable-pr-title-lint.yml`
+instead of the local duplicate). One fit problem, flagged rather than papered
+over: `reusable-ci-python-monorepo.yml` assumes a **uv workspace** (root
+`pyproject.toml` with `[tool.uv.workspace]`, a committed `uv.lock`, packages
+under `packages/<name>/`). `core/`'s actual dependency setup is
+`requirements.in` → `pip-compile --generate-hashes` → `requirements.txt`, a
+different shape entirely — this reusable workflow is **not** a drop-in
+replacement for `core`'s CI job without either migrating `core/` to a uv
+workspace or adapting the workflow (or writing a new one) to the
+lock-and-hash pattern `CLAUDE.md` requires. None of this is implemented in
+this pass — see the tracked issues linked from Known gaps below.
+
+## CI that actually runs, today (`shamwari-ai/shamwari`)
+
+Two workflow files, both repo-local:
+
+<CardGroup cols={2}>
+  <Card title="ci.yml" icon="circle-check">
+    Five jobs: `gateway`, `core`, `docs-site`, `site`, `gitleaks`. Runs on push
+    to `main` and on pull requests targeting `main` **or** `claude/**`.
+  </Card>
+  <Card title="pr-title-lint.yml" icon="tag">
+    One job enforcing Conventional Commits on the PR title, via
+    `amannn/action-semantic-pull-request`.
+  </Card>
+</CardGroup>
+
+### Why PRs are checked against `claude/**`, not just `main`
+
+```yaml
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main, "claude/**"]
+```
+
+Stacked PRs target the branch below them in the stack, not `main`. A filter of
+just `[main]` would silently give every layer but the bottom one zero CI — a
+green PR with no checks run, which looks identical to a passing one. Keep this
+in mind if you're setting up CI for a new repo: filtering PR triggers to
+`main` alone is the mistake this pattern exists to avoid.
+
+### The `ci.yml` jobs
+
+| Job | What it does | Why |
+|---|---|---|
+| **gateway** | `npm run typecheck` and `npm test` in `gateway/` | Per `CLAUDE.md`, gateway unit tests are what cover the two rules that must not be broken: personal-scope requests never resolve to a cloud destination, and the premium tier stays `licenseClass: restricted`. |
+| **core** | `python check_lock.py`, then `pip install --require-hashes -r requirements.txt`, then an import check | `core/requirements.txt` is generated by `pip-compile --generate-hashes` from the hand-edited `requirements.in` and must never be hand-edited. `check_lock.py` fails if the spec names something the lock doesn't pin, offline and before install, so a stale lock is named as such instead of surfacing as a confusing `ImportError`. `--require-hashes` is there so a dependency line *without* a hash fails the install, rather than quietly weakening the guarantee for the whole file. |
+| **docs-site** | `npm run build`, then `npm run check` | `astro check` covers types/MDX; the repo's own `check.mjs` covers what it can't — dead links/assets, colors with no base `:root` token, stray client JS, a size budget, and the "open weights" language-discipline wording rule. |
+| **site** | Same shape as `docs-site`, for the marketing site | Same rationale, applied to `site/`. |
+| **gitleaks** | Downloads the `gitleaks` binary directly and runs `gitleaks detect --source . --redact --no-banner --verbose` | The `gitleaks/gitleaks-action` wrapper now requires a paid license for org repos; the underlying binary is still MIT-licensed, so the workflow runs it directly to keep the scan free. |
+
+`ci.yml` sets one `concurrency` group for the whole workflow —
+`${{ github.workflow }}-${{ github.ref }}`, `cancel-in-progress: true` — so
+a new push to the same PR or branch cancels the `ci.yml` run in flight rather
+than queuing behind it. `pr-title-lint.yml` has its own, separate concurrency
+group (see below); the two workflows don't share one.
+
+### `pr-title-lint.yml`
+
+Enforces Conventional Commits on the PR title (not commit messages) via
+`amannn/action-semantic-pull-request`. Its own concurrency group is
+`${{ github.workflow }}-${{ github.event.pull_request.number }}` —
+keyed by PR number, not ref, since it only ever runs on `pull_request` events.
+
+- Allowed types: `feat`, `fix`, `perf`, `refactor`, `docs`, `test`, `build`,
+  `ci`, `chore`, `revert`, `style`.
+- No required scope.
+- Subject must start lowercase, read as an imperative, and not end in a
+  period.
+- `wip: true` — exempts titles that literally *start with* `wip` (case
+  insensitive), e.g. `wip: still figuring out the schema`. This is **not**
+  the same thing as GitHub's draft-PR flag: a draft PR with an ordinary title
+  still gets checked and can still fail. (PR #24 in `shamwari-ai/shamwari`
+  is a live example — it was a draft with a non-`wip` title and the check
+  failed until the title was fixed.)
+
+## Branch and PR requirements
+
+- **Conventional Commit PR titles** are enforced by the check above on every
+  PR against `shamwari-ai/shamwari`.
+- **CI must pass** on `main` and `claude/**` — see the trigger rationale
+  above if you're adding a workflow to a new repo.
+- **An automated review gate — "Claude Approvals" — is used on PRs in this
+  org.** This wasn't found codified as a workflow file, `CODEOWNERS` rule, or
+  branch-protection setting readable with this pass's credentials in any of
+  the three repos inspected (a direct branch-protection API read returned
+  `403`, not "not configured" — this pass simply couldn't see it, so treat
+  "not found in code" as "not yet inspectable," not "doesn't exist"). It
+  behaves like a required status check backed by a bot/GitHub App rather than
+  an in-repo workflow. Until someone with admin access confirms and documents
+  its exact configuration, don't assume this page's silence on it means it
+  isn't required — ask before relying on its absence.
+- **No `CODEOWNERS` file exists** in any of the three repos, so review routing
+  is manual today — there's no automatic reviewer assignment by path.
+- **No PR or issue template exists** in any of the three repos. Nothing in
+  `.github/PULL_REQUEST_TEMPLATE.md`, `.github/ISSUE_TEMPLATE/`, or the org
+  default location in `shamwari-ai/.github`.
+
+## Best practices actually enforced (not aspirational)
+
+Pulled from what the workflow files actually do, not from what would be nice:
+
+- **Pinned, hashed dependencies for anything that enforces the scope gate.**
+  `core/`'s CI fails before install if the lockfile doesn't match the spec,
+  and fails install if any pinned line is missing a hash. This exists because
+  `core/main.py::resolve_scope` is the authoritative half of rule 1
+  (personal-scope data must never reach a third-party inference provider) —
+  see `shamwari-ai/shamwari`'s `CLAUDE.md`.
+- **Secret scanning on every push and PR**, running the raw `gitleaks` binary
+  rather than a wrapper action, specifically to avoid a licensing dependency.
+- **Docs and marketing sites are build-checked, not just deployed.**
+  `docs-site` and `site` both run `astro check` plus a custom `check.mjs` that
+  enforces link/asset integrity, a size budget, and the org's own
+  language-discipline rule (e.g. "open weights," never "open source model" —
+  see the Language discipline table in `shamwari-ai/shamwari`'s `CLAUDE.md`).
+- **Every workflow cancels superseded runs of itself**, each via its own
+  `concurrency` group (see above) — a new push doesn't leave a stale run of
+  that workflow occupying a runner. The two workflows in this repo don't
+  share a group with each other.
+
+## Known gaps
+
+These are real gaps, not proposals dressed up as documentation. Don't build
+against any of these as if they exist:
+
+1. **No reusable workflows adopted into `shamwari-ai/.github` yet.** Every
+   repo that wants CI still writes it from scratch. A mature, ready-to-adopt
+   set already exists at `nyuchi/.github` (see
+   [Relationship to Nyuchi Africa's org-wide defaults](#relationship-to-nyuchi-africas-org-wide-defaults)
+   above) — the fix is copying/calling those, not lifting jobs out of
+   `shamwari-ai/shamwari`'s own `ci.yml` into a new workflow from scratch.
+   `core/`'s uv-workspace-vs-pip-compile mismatch (above) needs resolving
+   either way, and this page shouldn't be read as implying any of it has
+   happened yet.
+2. **No org-level defaults adopted** — no `CODEOWNERS`, no PR/issue
+   templates, no `SECURITY.md`, in `shamwari-ai/.github` or any of the three
+   repos. `nyuchi/.github` already publishes `CODEOWNERS.example`,
+   `dependabot.example.yml`, and real templates/`SECURITY.md` to copy and
+   adapt (see above) — `CODEOWNERS` ownership itself is still a human
+   decision this page can't make. A new repo in `shamwari-ai` gets none of
+   this unless someone adds it by hand, every time.
+3. **The "Claude Approvals" review gate is not represented as code
+   anywhere this pass could inspect.** If it's a required status check, it
+   should be possible to see it in branch protection or a ruleset; this pass's
+   token got a `403` reading branch protection directly. Someone with admin
+   access should confirm its configuration and either document it here or
+   (better) codify it so it's reviewable and reproducible for a new repo.
+4. **`shamwari-ai/docs` (this repo) ships no CI of its own.** It's still the
+   unmodified Mintlify starter kit at the workflow level — nothing here checks
+   broken links, build failures, or the language-discipline rule that
+   `shamwari`'s `docs-site`/`site` enforce, even though this repo is
+   presumably subject to the same discipline.
+5. **Branch protection / rulesets for these repos aren't inspectable with the
+   credentials available to this pass** (org-level endpoints and the
+   branch-protection endpoint both came back inaccessible). Anything above
+   framed as "enforced" is enforced in the sense that CI runs and would fail
+   the check — whether it's also configured as a *required* check that blocks
+   merge could not be confirmed independently here.
