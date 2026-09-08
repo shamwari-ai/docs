@@ -1,11 +1,28 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "aspen",
   "name": "Shamwari",
   "colors": {
     "primary": "#283593",
     "light": "#3d5afe",
     "dark": "#283593"
+  },
+  "background": {
+    "color": {
+      "light": "#faf9f5",
+      "dark": "#0e1128"
+    },
+    "decoration": "gradient"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Source Sans Pro",
+      "weight": 500
+    },
+    "body": {
+      "family": "Plus Jakarta Sans",
+      "weight": 500
+    }
   },
   "favicon": "https://shamwari.ai/favicon.png",
   "navigation": {
