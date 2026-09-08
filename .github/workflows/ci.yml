@@ -1,0 +1,112 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    # Not just main. Stacked pull requests target the branch below them in
+    # the stack, and a filter of [main] silently gives every layer but the
+    # bottom one zero checks — the failure looks like a green PR, which is
+    # the worst shape for it to take. Matches shamwari-ai/shamwari's ci.yml.
+    branches: [main, "claude/**"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      # Strict mode: exits non-zero on any warning or error, not just a
+      # hard build failure.
+      - name: mint validate
+        run: npx --yes mint@latest validate
+
+  links:
+    name: Broken links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      # --check-external is deliberately omitted: it makes the check
+      # dependent on third-party site availability and turns transient
+      # network failures into a red PR unrelated to the diff. Internal
+      # links, anchors, and docs.json redirect destinations are within
+      # this repo's control and cost nothing to check on every push.
+      - name: mint broken-links
+        run: npx --yes mint@latest broken-links --check-anchors --check-redirects
+
+  accessibility:
+    name: Accessibility
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: mint a11y
+        run: npx --yes mint@latest a11y
+
+  language-discipline:
+    name: Language discipline
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      # Same rule shamwari-ai/shamwari's docs-site/site enforce via
+      # check.mjs (see that repo's CLAUDE.md, "Language discipline" table):
+      # never claim "open source model", "we built our own model", or that
+      # data "stays in Africa" outside Mind/Ground. language.mdx and
+      # org-standards.mdx are excluded because they *quote* these as the
+      # phrases not to use (language.mdx documents the rule itself;
+      # org-standards.mdx references it) — matching them there is the
+      # point, not a violation. Add a page here only if it's genuinely
+      # meta-documentation about the rule, not product copy.
+      - name: Check for banned phrasing
+        run: |
+          set -uo pipefail
+          pattern='open[- ]source model|we built our own model|(your|our) data stays in africa'
+          exclude='^\./(language|org-standards)\.mdx:'
+          hits=$(grep -rniE "$pattern" --include='*.mdx' . | grep -vE "$exclude" || true)
+          if [ -n "$hits" ]; then
+            echo "::error::Language-discipline violation(s) found — see the Language discipline table in shamwari-ai/shamwari's CLAUDE.md:"
+            echo "$hits"
+            exit 1
+          fi
+          echo "No language-discipline violations found."
+
+  gitleaks:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install gitleaks
+        # The gitleaks/gitleaks-action wrapper now requires a paid license
+        # for org repos. The binary itself is MIT-licensed; we run it
+        # directly so this scan stays free. Matches
+        # shamwari-ai/shamwari's ci.yml exactly.
+        run: |
+          curl -sSL -o /tmp/gitleaks.tar.gz \
+            "https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz"
+          sudo tar -xzf /tmp/gitleaks.tar.gz -C /usr/local/bin gitleaks
+          gitleaks version
+
+      - name: Scan repository
+        run: gitleaks detect --source . --redact --no-banner --verbose
