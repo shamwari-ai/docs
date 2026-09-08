@@ -58,8 +58,38 @@ jobs:
         with:
           node-version: 22
 
-      - name: mint a11y
-        run: npx --yes mint@latest a11y
+      # Brand colours are gated by APCA 3.0, which is Mzizi's stated
+      # standard, not by mint a11y's WCAG heuristic. That heuristic is not
+      # polarity-aware: it tests colors.dark against BOTH backgrounds and
+      # demands 3:1 on each, even though `dark` only ever renders in light
+      # mode and `light` only ever renders in dark mode. Satisfying it
+      # forces both values to mid-tone and serves neither theme.
+      #
+      # It also masks real failures. Sodalite's darkHex #3D5AFE scores
+      # 3.78:1 on the dark background — a WCAG pass — but APCA Lc -26.9,
+      # below even the Lc 30 non-text floor.
+      - name: Brand colour contrast (APCA 3.0)
+        run: node scripts/check-contrast.mjs
+
+      # mint a11y still runs, for the checks it is genuinely good at: alt
+      # attributes on every image and video across the MDX files. Its
+      # colour section is advisory here for the reasons above, so the exit
+      # code is not the gate — the MDX result is parsed explicitly instead,
+      # and an unrecognised output shape fails rather than passing silently.
+      - name: mint a11y (MDX alt attributes)
+        run: |
+          set -uo pipefail
+          out=$(npx --yes mint@latest a11y 2>&1) || true
+          echo "$out"
+          if ! grep -qi 'Checking mdx files for accessibility issues' <<<"$out"; then
+            echo "::error::mint a11y output did not contain the MDX section — output shape changed, refusing to pass silently."
+            exit 1
+          fi
+          if ! grep -qiE 'no accessibility issues found' <<<"$out"; then
+            echo "::error::mint a11y reported MDX accessibility issues (missing alt attributes)."
+            exit 1
+          fi
+          echo "MDX accessibility checks passed."
 
   language-discipline:
     name: Language discipline

@@ -3,9 +3,9 @@
   "theme": "sequoia",
   "name": "Shamwari",
   "colors": {
-    "primary": "#004D40",
-    "light": "#64FFDA",
-    "dark": "#00796B"
+    "primary": "#283593",
+    "light": "#C6CFFF",
+    "dark": "#283593"
   },
   "background": {
     "color": {
