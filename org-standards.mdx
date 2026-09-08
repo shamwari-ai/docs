@@ -88,22 +88,30 @@ in mind if you're setting up CI for a new repo: filtering PR triggers to
 | **site** | Same shape as `docs-site`, for the marketing site | Same rationale, applied to `site/`. |
 | **gitleaks** | Downloads the `gitleaks` binary directly and runs `gitleaks detect --source . --redact --no-banner --verbose` | The `gitleaks/gitleaks-action` wrapper now requires a paid license for org repos; the underlying binary is still MIT-licensed, so the workflow runs it directly to keep the scan free. |
 
-All jobs share one `concurrency` group per workflow-ref, with
-`cancel-in-progress: true` — a new push to the same PR or branch cancels the
-run in flight rather than queuing behind it.
+`ci.yml` sets one `concurrency` group for the whole workflow —
+`${{ github.workflow }}-${{ github.ref }}`, `cancel-in-progress: true` — so
+a new push to the same PR or branch cancels the `ci.yml` run in flight rather
+than queuing behind it. `pr-title-lint.yml` has its own, separate concurrency
+group (see below); the two workflows don't share one.
 
 ### `pr-title-lint.yml`
 
 Enforces Conventional Commits on the PR title (not commit messages) via
-`amannn/action-semantic-pull-request`:
+`amannn/action-semantic-pull-request`. Its own concurrency group is
+`${{ github.workflow }}-${{ github.event.pull_request.number }}` —
+keyed by PR number, not ref, since it only ever runs on `pull_request` events.
 
 - Allowed types: `feat`, `fix`, `perf`, `refactor`, `docs`, `test`, `build`,
   `ci`, `chore`, `revert`, `style`.
 - No required scope.
 - Subject must start lowercase, read as an imperative, and not end in a
   period.
-- `wip: true` — a title marked as work-in-progress is still accepted (useful
-  for draft PRs that aren't ready for a final title yet).
+- `wip: true` — exempts titles that literally *start with* `wip` (case
+  insensitive), e.g. `wip: still figuring out the schema`. This is **not**
+  the same thing as GitHub's draft-PR flag: a draft PR with an ordinary title
+  still gets checked and can still fail. (PR #24 in `shamwari-ai/shamwari`
+  is a live example — it was a draft with a non-`wip` title and the check
+  failed until the title was fixed.)
 
 ## Branch and PR requirements
 
@@ -144,9 +152,10 @@ Pulled from what the workflow files actually do, not from what would be nice:
   enforces link/asset integrity, a size budget, and the org's own
   language-discipline rule (e.g. "open weights," never "open source model" —
   see the Language discipline table in `shamwari-ai/shamwari`'s `CLAUDE.md`).
-- **CI runs are cancelable and re-runnable per ref**, via a
-  `${{ github.workflow }}-${{ github.ref }}` concurrency group — a superseded
-  push doesn't leave a stale run occupying a runner.
+- **Every workflow cancels superseded runs of itself**, each via its own
+  `concurrency` group (see above) — a new push doesn't leave a stale run of
+  that workflow occupying a runner. The two workflows in this repo don't
+  share a group with each other.
 
 ## Known gaps
 
