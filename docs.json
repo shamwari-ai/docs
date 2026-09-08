@@ -31,7 +31,28 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "groups": [
+      {
+        "group": "Start here",
+        "pages": [
+          "index",
+          "quickstart",
+          "rules",
+          "scopes"
+        ]
+      },
+      {
+        "group": "How it works",
+        "pages": [
+          "architecture",
+          "routing",
+          "ground",
+          "language",
+          "traffic"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
