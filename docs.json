@@ -27,7 +27,7 @@
   "icons": {
     "library": "lucide"
   },
-  "favicon": "https://shamwari.ai/favicon.png",
+  "favicon": "/images/favicon.png",
   "navigation": {
     "groups": [
       {
@@ -57,8 +57,8 @@
     ]
   },
   "logo": {
-    "light": "https://shamwari.ai/shamwari-icon.png",
-    "dark": "https://shamwari.ai/shamwari-mark-cream.png"
+    "light": "/images/logo-light.png",
+    "dark": "/images/logo-dark.png"
   },
   "navbar": {
     "links": [

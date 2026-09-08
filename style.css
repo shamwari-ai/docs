@@ -23,6 +23,16 @@
  * exactly on this neutral independently), so borders and muted text here
  * read as part of the same family rather than Mintlify's unrelated
  * default gray.
+ *
+ * Verified against a local `mint dev` preview: this file is NOT picked up
+ * by local dev (tried both `globals.css` and `style.css` as filenames —
+ * neither appears in the rendered page, and the --gray-* values stay
+ * Mintlify's own computed defaults). Everything else in docs.json (theme,
+ * colors, background, fonts) renders correctly locally. Per Mintlify's own
+ * docs this file is auto-loaded on the deployed site, so it should still
+ * take effect once shipped — this is a local-CLI-preview gap, not
+ * something wrong with this file. Re-verify on an actual deploy preview
+ * before assuming the gray ramp is live.
  */
 
 :root {
