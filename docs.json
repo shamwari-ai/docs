@@ -9,15 +9,6 @@
   },
   "favicon": "https://shamwari.ai/favicon.png",
   "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
     "groups": [
       {
         "group": "Start here",
@@ -35,6 +26,12 @@
           "ground",
           "language",
           "traffic"
+        ]
+      },
+      {
+        "group": "Engineering",
+        "pages": [
+          "org-standards"
         ]
       }
     ]
