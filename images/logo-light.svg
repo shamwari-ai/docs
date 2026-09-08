@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <!-- Shamwari mark: constellation icon in Mzizi's cobalt lightHex (#0047AB), for
+       legibility on light backgrounds. Node layout matches the existing brand mark
+       (favicon.png). -->
+  <g stroke="#0047AB" stroke-width="2.5" stroke-linecap="round">
+    <line x1="13" y1="8" x2="47" y2="12" />
+    <line x1="13" y1="8" x2="30" y2="33" />
+    <line x1="47" y1="12" x2="30" y2="33" />
+    <line x1="9" y1="41" x2="30" y2="33" />
+    <line x1="57" y1="41" x2="30" y2="33" />
+    <line x1="30" y1="33" x2="26" y2="56" />
+    <line x1="30" y1="33" x2="39" y2="56" />
+    <line x1="9" y1="41" x2="26" y2="56" />
+    <line x1="57" y1="41" x2="39" y2="56" />
+  </g>
+  <g fill="#0047AB">
+    <circle cx="13" cy="8" r="5.5" />
+    <circle cx="47" cy="12" r="5.5" />
+    <circle cx="30" cy="33" r="6.5" />
+    <circle cx="9" cy="41" r="5.5" />
+    <circle cx="57" cy="41" r="5.5" />
+    <circle cx="26" cy="56" r="5" />
+    <circle cx="39" cy="56" r="5" />
+  </g>
+  <text x="76" y="44" font-family="'Noto Serif', Georgia, serif" font-size="32" font-weight="600" fill="#0047AB">Shamwari</text>
+</svg>
