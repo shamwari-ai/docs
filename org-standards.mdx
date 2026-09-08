@@ -51,8 +51,26 @@ in the ecosystem — see the next section.
 
 ## Relationship to Nyuchi Africa's org-wide defaults
 
-Shamwari is sold commercially under Nyuchi Africa (see this org's own
-`CLAUDE.md`). Nyuchi Africa already runs a separate GitHub org —
+**Bundu Foundation governs four pillars, and Nyuchi and Shamwari AI are two
+of them — siblings, not parent and child.** Per [bundu.org](https://bundu.org):
+"Four pillars: Bundu Labs (research), Mukoko (consumer), Nyuchi (commercial),
+Shamwari AI (community)." Nyuchi Africa is the commercial pillar; Shamwari AI
+is the community pillar. Shamwari's IP is owned by Bundu Foundation and,
+per bundu.org, is "implemented across Nyuchi and Mukoko surfaces and sold
+commercially under Nyuchi" — Nyuchi is Shamwari's commercial *operator*, not
+its corporate parent. This matches `shamwari-ai/shamwari`'s own `CLAUDE.md`
+exactly: "IP owner: Bundu Foundation (Zimbabwe CLG) · Sold commercially
+under: Nyuchi Africa." (That same `CLAUDE.md` flags a known upstream
+inconsistency worth being precise about here: a separate Mzizi-registry
+source reportedly describes three pillars with Nyuchi as *parent* — that
+version contradicts bundu.org and should not be treated as authoritative.)
+
+That sibling relationship — not a parent/subsidiary one — is *why* looking at
+Nyuchi's own governance is useful here: both pillars share "the same identity
+layer, the same design system, the same engineering doctrine" (bundu.org)
+under the same Foundation, and Nyuchi's commercial role in operating Shamwari
+gives it practical reason to keep its CI/governance tooling reusable.
+Nyuchi Africa runs a separate GitHub org —
 [`nyuchi`](https://github.com/nyuchi) — whose
 [`nyuchi/.github`](https://github.com/nyuchi/.github) repo is public and is
 exactly the kind of org-wide governance template `shamwari-ai/.github`
@@ -78,8 +96,9 @@ currently lacks:
 - **`profile/governance/NA-01/02/03`** — a corporate constitution, an
   open-source governance policy, and an engineering working agreement.
   `NA-03_ENGINEERING.md` explicitly scopes itself to "Platform and product
-  work (Mukoko, Nyuchi Enterprise, sister brands...)" — Shamwari, as a Nyuchi
-  Africa commercial product, falls under that description.
+  work (Mukoko, Nyuchi Enterprise, sister brands...)" — "sister brands" is
+  the accurate framing: Shamwari is a sibling Bundu pillar Nyuchi operates
+  commercially, not a Nyuchi-owned product line.
 
 **None of this reaches `shamwari-ai` automatically.** `nyuchi` and
 `shamwari-ai` are separate GitHub orgs. The fallback mechanism that makes
