@@ -91,21 +91,36 @@ deliberate copy (for templates, `CODEOWNERS`, `SECURITY.md`) or an explicit
 workflow file (for the reusable workflows — permitted across orgs since the
 repo is public).
 
-**The recommended path is adoption, not reinvention**: copy/adapt the
-templates above into `shamwari-ai/.github`, and let
-`shamwari-ai/shamwari`'s `ci.yml`/`pr-title-lint.yml` become thin callers of
-the matching `nyuchi` reusable workflows (TypeScript for `gateway/`,
-docs-mdx for `docs-site/`, `site/`, and this repo, `reusable-pr-title-lint.yml`
-instead of the local duplicate). One fit problem, flagged rather than papered
-over: `reusable-ci-python-monorepo.yml` assumes a **uv workspace** (root
-`pyproject.toml` with `[tool.uv.workspace]`, a committed `uv.lock`, packages
-under `packages/<name>/`). `core/`'s actual dependency setup is
-`requirements.in` → `pip-compile --generate-hashes` → `requirements.txt`, a
-different shape entirely — this reusable workflow is **not** a drop-in
-replacement for `core`'s CI job without either migrating `core/` to a uv
-workspace or adapting the workflow (or writing a new one) to the
-lock-and-hash pattern `CLAUDE.md` requires. None of this is implemented in
-this pass — see the tracked issues linked from Known gaps below.
+**The recommended path is adoption, not reinvention** — but two fit problems
+block a straight swap, flagged rather than papered over:
+
+- **Python**: `reusable-ci-python-monorepo.yml` assumes a **uv workspace**
+  (root `pyproject.toml` with `[tool.uv.workspace]`, a committed `uv.lock`,
+  packages under `packages/<name>/`). `core/`'s actual dependency setup is
+  `requirements.in` → `pip-compile --generate-hashes` → `requirements.txt`, a
+  different shape entirely — this reusable workflow is **not** a drop-in
+  replacement for `core`'s CI job without either migrating `core/` to a uv
+  workspace or adapting the workflow (or writing a new one) to the
+  lock-and-hash pattern `CLAUDE.md` requires.
+- **JavaScript/TypeScript, org-wide**: `gateway/`, `docs-site/`, and `site/`
+  all use **npm** (`package-lock.json`, no `.nvmrc`; `gateway/` has no `lint`
+  script at all). `reusable-ci-typescript.yml`, `reusable-ci-typescript-lib.yml`,
+  and `reusable-ci-docs-mdx.yml` all hardcode `pnpm/action-setup` +
+  `pnpm install --frozen-lockfile` — there is no npm code path in any of
+  them. None of the three JS reusables are a drop-in for any of this repo's
+  JS packages without first migrating the whole JS stack from npm to pnpm (or
+  forking npm-compatible variants). Separately, `reusable-ci-docs-mdx.yml`
+  runs cspell + lychee + a generic build command — it has **no equivalent**
+  of `check.mjs`'s dead-asset checks, `:root`-token color checks, size
+  budget, or the "open weights" language-discipline rule (see `CLAUDE.md`).
+  Adopting it as-is would trade one set of checks for a different,
+  non-overlapping set, not a strict upgrade — `check.mjs` would need to keep
+  running alongside it, or get folded into a forked variant.
+
+So "adoption" for the JS side is gated on a repo-wide npm→pnpm migration
+decision, not a config tweak — a bigger blocker than it might first look.
+None of this is implemented in this pass — see the tracked issues linked
+from Known gaps below.
 
 ## CI that actually runs, today (`shamwari-ai/shamwari`)
 
@@ -228,9 +243,10 @@ against any of these as if they exist:
    [Relationship to Nyuchi Africa's org-wide defaults](#relationship-to-nyuchi-africas-org-wide-defaults)
    above) — the fix is copying/calling those, not lifting jobs out of
    `shamwari-ai/shamwari`'s own `ci.yml` into a new workflow from scratch.
-   `core/`'s uv-workspace-vs-pip-compile mismatch (above) needs resolving
-   either way, and this page shouldn't be read as implying any of it has
-   happened yet.
+   `core/`'s uv-workspace-vs-pip-compile mismatch and the org-wide
+   npm-vs-pnpm mismatch blocking every JS reusable (both above) need
+   resolving either way, and this page shouldn't be read as implying any of
+   it has happened yet.
 2. **No org-level defaults adopted** — no `CODEOWNERS`, no PR/issue
    templates, no `SECURITY.md`, in `shamwari-ai/.github` or any of the three
    repos. `nyuchi/.github` already publishes `CODEOWNERS.example`,
