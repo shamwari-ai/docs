@@ -5,3 +5,9 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Agent instructions, not documentation content. Mintlify already
+# auto-ignores README.md / LICENSE.md / CHANGELOG.md / CONTRIBUTING.md
+# for the same reason; AGENTS.md belongs with them. It is not in
+# docs.json navigation and is never published as a page.
+AGENTS.md
