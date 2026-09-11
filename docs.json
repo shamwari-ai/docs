@@ -32,21 +32,11 @@
     "groups": [
       {
         "group": "Start here",
-        "pages": [
-          "index",
-          "rules",
-          "scopes"
-        ]
+        "pages": ["index", "rules", "scopes"]
       },
       {
         "group": "How it works",
-        "pages": [
-          "architecture",
-          "routing",
-          "ground",
-          "language",
-          "traffic"
-        ]
+        "pages": ["architecture", "routing", "ground", "language", "traffic"]
       }
     ]
   },
