@@ -11,3 +11,7 @@ drafts/
 # for the same reason; AGENTS.md belongs with them. It is not in
 # docs.json navigation and is never published as a page.
 AGENTS.md
+
+# Org-standard community files: plain Markdown, not Mintlify content.
+CODE_OF_CONDUCT.md
+SECURITY.md
